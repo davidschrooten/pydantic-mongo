@@ -72,7 +72,7 @@ class AbstractRepository(Generic[T]):
         data.pop("v")
         if model.id:
             data["_id"] = model.id
-        if hasattr(model, 'v') and model.v:
+        if hasattr(model, 'v'):
             data["__v"] = model.v
         return data
 
